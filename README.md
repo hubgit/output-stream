@@ -1,10 +1,9 @@
 # Example usage
 
 ```js
-const collection = require('rest-collection-stream')
 const output = require('output-stream')('repositories.ndjson')
 
-collection('https://api.github.com/search/repositories', {
+require('rest-collection-stream')('https://api.github.com/search/repositories', {
   qs: {
     sort: 'stars',
     order: 'desc',
