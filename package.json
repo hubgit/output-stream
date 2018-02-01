@@ -1,9 +1,11 @@
 {
   "name": "output-stream",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create an output stream for saving data to a file",
   "main": "src",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "repository": "hubgit/output-stream",
   "author": "Alf Eaton <eaton.alf@gmail.com>",
   "license": "MIT",
