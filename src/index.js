@@ -25,6 +25,12 @@ function serializerFromFilename(filename, options) {
     case '.csv':
       return csv(options)
 
+    case '.tsv':
+      return csv({
+        ...options,
+        separator: '  ' // NOTE: not '\t'
+      })
+
     default:
       throw new Error('Unsupported file type')
   }
