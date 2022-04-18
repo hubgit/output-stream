@@ -1,7 +1,7 @@
-const fs = require('fs')
+const fs = require('node:fs')
+const path = require('node:path')
 const csv = require('csv-write-stream')
 const ndjson = require('ndjson')
-const path = require('path')
 
 module.exports = function (filename, options) {
   const serializer = serializerFromFilename(filename, options)
@@ -28,7 +28,7 @@ function serializerFromFilename(filename, options) {
     case '.tsv':
       return csv({
         ...options,
-        separator: '  ' // NOTE: not '\t'
+        separator: '\t',
       })
 
     default:
